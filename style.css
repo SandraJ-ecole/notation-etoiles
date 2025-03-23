@@ -1,0 +1,143 @@
+/* Variables pour les couleurs */
+:root {
+    --primary-color: #ff7a45;
+    --secondary-color: #1e2c3a;
+    --text-color: #e9ecef;
+    --bg-color: #121212;
+    --card-bg: #1e2c3a;
+    --star-inactive: #323841;
+    --star-hover: #ffc107;
+    --star-active: #ff7a45;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style de la carte */
+.rating-card, .thank-you-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.card-text {
+    color: #b0b7c3;
+    font-size: 0.95rem;
+}
+
+/* Style des étoiles de notation */
+.rating-stars {
+    margin: 20px 0;
+}
+
+.stars-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.star {
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: var(--star-inactive);
+    transition: all 0.2s ease;
+}
+
+.star:hover, .star.hovered {
+    color: var(--star-hover);
+    transform: scale(1.1);
+}
+
+.star.selected {
+    color: var(--star-active);
+    transform: scale(1.15);
+}
+.star span{
+    color: #63809b;
+}
+
+/* Style du bouton */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #e86a37;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 122, 69, 0.4);
+}
+
+.btn-primary:disabled {
+    background-color: #6c757d;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Icônes */
+.rating-icon, .thank-you-icon {
+    margin-bottom: 15px;
+}
+
+.rating-icon i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Animation pour la transition entre les cartes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style pour le message de remerciement */
+.selected-rating {
+    background-color: rgba(255, 122, 69, 0.1);
+    color: var(--primary-color);
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Adaptation pour les écrans mobiles */
+@media (max-width: 576px) {
+    .stars-container {
+        gap: 10px;
+    }
+    
+    .star {
+        font-size: 2rem;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+}

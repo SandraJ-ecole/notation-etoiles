@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de Notation Interactif</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome pour les étoiles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row min-vh-100 justify-content-center align-items-center">
+            <div class="col-md-6 col-lg-5 col-xl-4">
+                <!-- Carte d'évaluation -->
+                <div id="rating-card" class="card rating-card">
+                    <div class="card-body text-center">
+                        <div class="rating-icon mb-3">
+                            <i class="fa-solid fa-star text-warning"></i>
+                        </div>
+                        <h2 class="card-title mb-3">Donner votre avis !</h2>
+                        <p class="card-text mb-4">N'hésitez pas à nous faire part de votre avis. Tous vos commentaires sont les bienvenus pour nous aider à améliorer notre offre !</p>
+                        
+                        <!-- Système d'étoiles pour la notation -->
+                        <div class="rating-stars mb-4">
+                            <div class="stars-container">
+                                <span class="star" data-value="1"><i class="fa-solid fa-circle"></i></span>
+                                <span class="star" data-value="2"><i class="fa-solid fa-circle"></i></span>
+                                <span class="star" data-value="3"><i class="fa-solid fa-circle"></i></span>
+                                <span class="star" data-value="4"><i class="fa-solid fa-circle"></i></span>
+                                <span class="star" data-value="5"><i class="fa-solid fa-circle"></i></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Bouton d'envoi -->
+                        <button id="submit-button" class="btn btn-primary w-100" disabled>ENVOYER</button>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small class="text-muted">Créé par Webitech</small>
+                    </div>
+                </div>
+                
+                <!-- Message de remerciement (caché initialement) -->
+                <div id="thank-you-card" class="card thank-you-card d-none">
+                    <div class="card-body text-center">
+                        <div class="thank-you-icon mb-3">
+                            <img src="/images/illustration-thank-you.svg" alt="Thank you" class="img-fluid">
+                        </div>
+                        <div id="selected-rating-display" class="selected-rating mb-2">
+                            Vous avez sélectionné <span id="rating-value">0</span> sur 5
+                        </div>
+                        <h2 class="card-title mb-3">Merci !</h2>
+                        <p class="card-text">Nous vous remercions d'avoir pris le temps d'effectuer cette note. Si vous avez besoin de plus d'aide, n'hésitez pas à nous contacter !</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small class="text-muted">Créé par Webitech</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script personnalisé -->
+    <script src="script.js"></script>
+</body>
+</html>
