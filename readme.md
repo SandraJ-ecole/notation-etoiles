@@ -9,11 +9,6 @@ Ce projet est un **système de notation interactif** en **HTML, CSS et JavaScrip
 
 ---
 
-## 📥 Prérequis & Installation
-
-1. **Téléchargez le projet** via ce lien : [Lien de téléchargement](https://github.com/Sunlama0/tp-interactive-rating)
-2. **Décompressez l'archive** et ouvrez le dossier
-
 ---
 
 ## 📌 Fonctionnalités
